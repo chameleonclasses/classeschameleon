@@ -31,36 +31,28 @@
 			<link rel="stylesheet" href="css/main.css">
 			<style>
 				
-				
-				.dropdown {
-				  position: relative;
-				  display: inline-block;
-				}
-				
-				.dropdown-content {
-				  display: none;
-				  position: absolute;
-				  background-color: #f9f9f9;
-				  min-width: 160px;
-				  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-				  z-index: 1;
-				}
-				
-				.dropdown-content a {
-				  color: black;
-				  padding: 6px 8px;
-				  text-decoration: none;
-				  display: block;
-				}
-				
-				.dropdown-content a:hover {background-color: #f1f1f1}
-				
-				.dropdown:hover .dropdown-content {
-				  display: block;
-				}
-				
-				
-				</style>
+			.dropdown-menu{
+				display: none;
+  position: absolute;
+  
+  max-width: 180px;
+ 
+  padding: 10px 20px;
+  
+			}
+			  .dropdown-submenu {
+  position: relative;
+ 
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 20%;
+  margin-top: -1px;
+  padding: 10px 20px;
+}
+			  </style>
+			  </head>
 		</head>
 		<body>	
 		  <header id="header" id="home">
@@ -165,11 +157,11 @@
 							<div class="single-feature">
 								<div class="title">
 										
-								<div class="dropdown">
+								
 									<h4>E-Library</h4>
 									
 									
-									</div>
+									
 								</div>
 								<div class="desc-wrap">
 									<p>
@@ -177,19 +169,57 @@
 									</p>
 									
 									<div class="dropdown">
+										<a class=" dropdown-toggle"  data-toggle="dropdown">Access Now</a>
 										
-										<a>E-library</a>
+										<ul class="dropdown-menu">
+										  <li><a tabindex="-1" href="https://drive.google.com/folderview?id=1UfzEj-FQI_pUulwJElMnQQkdDQQlPinX">Class 6</a></li>
+										  <li><a tabindex="-1" href="https://drive.google.com/folderview?id=1UgMaRHcdoQoey5rd9r8did4QZL_77i5Y">Class 7</a></li>
+										  <li><a tabindex="-1" href="https://drive.google.com/folderview?id=1V0glAYdOscyPOrbSCJwUZ9KCBNeWoumJ">Class 8</a></li>
+										  <li><a tabindex="-1" href="https://drive.google.com/folderview?id=1V0rZLRM475B7VGByMVUe-iMihLRflqjH">Class 9</a></li>
+										  <li><a tabindex="-1" href="https://drive.google.com/folderview?id=1V80pTQUXFC_19iYDT-XZUrTO56nyktFP">Class 10</a></li>
+										  
+										  <li class="dropdown-submenu">
+											<a class="test" tabindex="-1" >Class 11 <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+											  <li><a tabindex="-1" href="https://drive.google.com/folderview?id=1VXWTAak2R5Ou5nIpIUN1ZAa6FVlvrOrM">Science</a></li>
+											  <li><a tabindex="-1" href="https://drive.google.com/folderview?id=1Vc6qgugdb8nYNX3RhZ9TYQ-PRRqYgzYd">Commerce</a></li>
+											  <li><a tabindex="-1" href="https://drive.google.com/folderview?id=1VihaCefUft0tSsNwfFlJC73l06VKNhNf">Arts</a></li>
+											</ul>
+										  </li>
+										  <li class="dropdown-submenu">
+											<a class="test" tabindex="-1" >Class 12 <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a tabindex="-1" href="https://drive.google.com/folderview?id=1VvonMmedoZg9FketjVYPm8vuN-2pNdUb">Science</a></li>
+												<li><a tabindex="-1" href="https://drive.google.com/folderview?id=1Vr3U9PwlTHxhNuDIAUO_gIH3jrjXn9XJ">Commerce</a></li>
+												<li><a tabindex="-1" href="https://drive.google.com/folderview?id=1VqzdGiAn96HmCnNLaZ_RJahlus96MMI9">Arts</a></li>
+											</ul>
+										  </li>
+										  <li class="dropdown-submenu">
+											<a class="test" tabindex="-1" >Graduation <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a tabindex="-1" href="https://drive.google.com/folderview?id=1W8fQMlca0STprKMtGC1c9cEROj8GnTwT">Science</a></li>
+												<li><a tabindex="-1" href="https://drive.google.com/folderview?id=1W0H7ZwLqCR7jkwLPxfdI6fNqfXhhFSn_">Commerce</a></li>
+												<li><a tabindex="-1" href="https://drive.google.com/folderview?id=1VyCLBfAJJW__wiiO9o5CiqjG-e3TzLoh">Arts</a></li>
+											</ul>
+										  </li>
+										  <li class="dropdown-submenu">
+											<a class="test" tabindex="-1" >Post-graduation<span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a tabindex="-1" href="https://drive.google.com/folderview?id=1WI3JQcQA_rGa6eldxOqP7s8SDSPRvuNR">Science</a></li>
+												<li><a tabindex="-1" href="https://drive.google.com/folderview?id=1WBzqcWnQ7FyYOfMN6C7QgQmrbHRpuDqK">Commerce</a></li>
+												<li><a tabindex="-1" href="https://drive.google.com/folderview?id=1WI3JQcQA_rGa6eldxOqP7s8SDSPRvuNR">Arts</a></li>
+											</ul>
+										  </li>
+										</ul>
+									  </div>
+									</div>
 									
-										<div class="dropdown-content">
-										<a href="#">class 6</a>
-										<a href="#">class 7</a>
-										<a href="#">class 8</a>
-										<a href="#">class 9</a>
-										<a href="#">class 10</a>
-										<a href="#">class 11</a>
-										<a href="#">class 12</a>
+											
 										</div>
 									  </div>
+										
+										  
+										
 									</div>
 								</div>								
 							
@@ -623,6 +653,15 @@
 			<script src="js/owl.carousel.min.js"></script>									
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>	
+			<script>
+				$(document).ready(function(){
+				  $('.dropdown-submenu a.test').on("click", function(e){
+					$(this).next('ul').toggle();
+					e.stopPropagation();
+					e.preventDefault();
+				  });
+				});
+				</script>
 		</body>
 	</html>
 
