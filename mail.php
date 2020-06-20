@@ -1,30 +1,31 @@
 <?php
-    if(isset($_Post['submit'])){ 
-
-    
+    $to = 'demo@site.com';
     $name = $_POST["name"];
-    $qualifications = $_POST["qualifications "];
-    $specialization = $_POST["specialization"];
-    $phone = $_POST["phone"];
-    $email = $_POST["email"];
-    $areapin = $_POST["areapin"];
-    $course = $_POST["course"];
-    $class = $_POST["class"];
-    $experience = $_POST["experience"];
+    $email= $_POST["email"];
+   
+    $subject= $_POST["subject"];
+    
 
-    $to = 'lalteshsharma1997@gmail.com';
-    $subject='Form Submission';
-    $message = "Name: ".$name. "\n"."Phone: ".$qualifications."\n". "Wrote the following: "."\n\n".$experience;
+
+    $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= "From: " . $email . "\r\n"; // Sender's E-mail
-    
-    
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-    if (@mail($to, $subject, $message,  $headers))
+    $message ='<table style="width:100%">
+        <tr>
+            <td>'.$name.'  '.$subject.'</td>
+        </tr>
+        <tr><td>Email: '.$email.'</td></tr>
+        <tr><td>phone: '.$subject.'</td></tr>
+       
+        
+    </table>';
+
+    if (@mail($to, $email, $message, $headers))
     {
         echo 'Your message has been sent.';
     }else{
         echo 'failed';
     }
-}
 
 ?>
