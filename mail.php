@@ -1,27 +1,30 @@
 <?php
-    $to = 'lalteshsharma1997@gmail.com';
+    if(isset($_Post['submit'])){ 
+
+    
     $name = $_POST["name"];
     $qualifications = $_POST["qualifications "];
     $specialization = $_POST["specialization"];
     $phone = $_POST["phone"];
     $email = $_POST["email"];
     $areapin = $_POST["areapin"];
-    $subject = $_POST["subject"];
+    $course = $_POST["course"];
     $class = $_POST["class"];
     $experience = $_POST["experience"];
 
-
-    $headers = 'MIME-Version: 1.0' . "\r\n";
+    $to = 'lalteshsharma1997@gmail.com';
+    $subject='Form Submission';
+    $message = "Name: ".$name. "\n"."Phone: ".$qualifications."\n". "Wrote the following: "."\n\n".$experience;
     $headers .= "From: " . $email . "\r\n"; // Sender's E-mail
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
+    
     
 
-    if (@mail($to, $name, $qualifications, $specialization, $phone, $email, $areapin, $subject, $class, $experience, $headers))
+    if (@mail($to, $subject, $message,  $headers))
     {
         echo 'Your message has been sent.';
     }else{
         echo 'failed';
     }
+}
 
 ?>
