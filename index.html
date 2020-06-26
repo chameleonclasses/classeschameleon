@@ -51,6 +51,9 @@
   margin-top: -1px;
   padding: 10px 20px;
 }
+
+
+}
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
@@ -246,7 +249,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
 									<p>
 										Anytime you use your God-given abilities to help others, you are fulfilling your purpose of life by some kind of donation.
 									</p>
-									<a  >Donate Books</a>
+									
+									<a onclick="openForm()">Donate Books</a>
+								<div class="form-popup" id="myForm">
+
+									<form action="#" class="form-container">
+										<h3 style="text-decoration:underline">Student Registration</h3>
+										<label for="name"><b>Name</b></label>
+										<input type="text" placeholder="Name" name="name" required>
+										<label for="phone"><b>Phone</b></label>
+										<input type="text" placeholder="Phone" name="phone" required>
+									
+										
+									
+										<button type="submit" class="btn">Submit</button>
+										<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+									  </form>
+
+								</div>
 									
 									&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" style="text-align:left;">Get Books</a>									
 								</div>
@@ -760,6 +780,41 @@ body {font-family: Arial, Helvetica, sans-serif;}
 					function closeForm() {
 					  document.getElementById("myForm").style.display = "none";
 					}
+					
+						
+					
+						</script>
+						
+						<script>
+						var openbtn = document.querySelectorAll(".open-button");
+
+						openbtn.forEach(function(btn){
+							btn.onclick = function{
+								var mod = btn.getAttribute("data-popup");
+							document.getElementById(myForm).style.display = "block";
+							};
+						});
+							
+						var closebtn = document.querySelectorAll(".form-container .btn");
+						closebtn.forEach(function(btn){
+							btn.onclick = function{
+								var mod = (btn.closest(".form-popup").style.display = "none");
+							
+							};
+						});
+						var cancelbtn = document.querySelectorAll(".form-container .cancel");
+						closebtn.forEach(function(btn){
+							btn.onclick = function{
+								var mod = (btn.closest(".form-popup").style.display = "none");
+							
+							};
+						});
+                        window.onclick = function(e){
+							if(e.target.className === ".form-popup"){
+								e.target.style.display = "none";
+							}
+						};
+						
 					</script>
 					
 		</body>
