@@ -4143,6 +4143,23 @@ dl.toggle.time-line:before {
 		margin-top: 30px
 	}
 }
+
+@media (max-width: 900px) and (min-width: 600px) and (min-width:480px), (min-width: 1100px) {
+	.modal-content{
+		background:#fff; 
+		margin-top: 90px;
+		width: 25%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 8px 24px;
+		border-radius: 4px;
+		z-index: 4;
+	}
+  
+	}
+
+	
+
 .footer-bottom .lnr,
 .footer-bottom a {
 	color: #f7631b
