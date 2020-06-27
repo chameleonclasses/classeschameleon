@@ -2106,21 +2106,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 		font-size: 12px
 	}
 }
-@media (max-width: 991.98px) {
-	.modal-content {
-		max-width:90%
-	}
-}
-
-@media (max-width: 1199.98px) {
-	.modal-content {
-		max-width:90%	
-	}
-}
-
-@media (max-width: 480px) {
-	.modal-content {
-		font-size: 12px
 
 
 .banner-content .primary-btn {
