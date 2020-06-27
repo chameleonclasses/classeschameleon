@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<!-- Site Title -->
 		<title > Chameleon classes</title>
-
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
 			CSS
@@ -58,6 +58,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
+
+
 .open-button {
   background-color: #555;
   color:white;
@@ -72,15 +74,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0px;;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-  
-}
+
 
 /* Add styles to the form container */
 .form-container {
@@ -95,7 +89,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-container input[type=text], .form-container input[type=password] {
   width: 100%;
   height:10%;
-  padding: 10px;
+  padding: 7px;
   margin: 2px 0 6px 0;
   border: none;
   background: #f1f1f1;
@@ -130,6 +124,28 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+
+.modal-content{
+      background:#fff; 
+      margin-top: 70px;
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 8px 24px;
+      border-radius: 4px;
+      z-index: 4;
+  }
+
+  .modal-header .modal-close{
+        font-size: 20px;
+        background: white;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        border-radius: 50px;
+      
+    }
 			  </style>
 			  </head>
 		</head>
@@ -194,28 +210,43 @@ body {font-family: Arial, Helvetica, sans-serif;}
 							<p class="pt-10 pb-10" style="font-size: 20px; ">
 								Where no one is left behind!
 							</p>
+							<button  class="modal-open btn primary-btn" 
+							data-modal="modal1">Register now</button>
 							
-							<button class="open-buttton primary-btn " onclick="openForm()">REGISTER NOW</button>
-								<div class="form-popup" id="myForm">
+							<div class="modal" id="modal1">
+
+							
+								<div class="modal-content">
+								  <div class="modal-header"><h4 style="text-decoration:underline">Student Registration</h4>
+									<button class="icon modal-close" ><i
+									   class="material-icons">close</i></button>
+									  </div>
+								  <div class="modal-body">
 									<form action="#" class="form-container">
-									  <h3 style="text-decoration:underline">Student Registration</h3>
-									  <label for="name"><b>Name</b></label>
-									  <input type="text" placeholder="Name" name="name" required>
-									  <label for="phone"><b>Phone</b></label>
-									  <input type="text" placeholder="Phone" name="phone" required>
-								  
-									  <label for="email"><b>Email</b></label>
-									  <input type="text" placeholder="Enter Email" name="email" required>
-									  <label for="class"><b>Class</b></label>
-									  <input type="text" placeholder="Class" name="class" required>
-									  <label for="subject"><b>Choose from our services</b></label>
-									  <input type="text" placeholder="Subject" name="subject" required>
-									  
-								  
-									  <button type="submit" class="btn">Submit</button>
-									  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-									</form>
-								  </div>
+										
+										<label for="name"><b>Name</b></label>
+										<input type="text" placeholder="Name" name="name" required>
+										<label for="phone"><b>Phone</b></label>
+										<input type="text" placeholder="Phone" name="phone" required>
+									
+										<label for="email"><b>Email</b></label>
+										<input type="text" placeholder="Enter Email" name="email" required>
+										<label for="class"><b>Class</b></label>
+										<input type="text" placeholder="Class" name="class" required>
+										<label for="subject"><b>Choose from our services</b></label>
+										<input type="text" placeholder="Subject" name="subject" required>
+										
+									
+										<button type="submit" class="btn">Submit</button>
+										
+									  </form>
+									  </div>
+									 
+									  </div> 
+								</div>
+								
+
+								
 								
 						</div>										
 					</div>
@@ -250,24 +281,42 @@ body {font-family: Arial, Helvetica, sans-serif;}
 										Anytime you use your God-given abilities to help others, you are fulfilling your purpose of life by some kind of donation.
 									</p>
 									
-									<a onclick="openForm()">Donate Books</a>
-								<div class="form-popup" id="myForm">
-
+									<a class="modal-open" 
+							data-modal="modal2">Donate</a>
+							
+							<div class="modal" id="modal2">
+								<div class="modal-content">
+								  <div class="modal-header"><h4 style="text-decoration:underline">Donation form</h4>
+									<button class="icon modal-close" ><i
+									   class="material-icons">close</i></button>
+									  </div>
+								  <div class="modal-body">
 									<form action="#" class="form-container">
-										<h3 style="text-decoration:underline">Student Registration</h3>
+										
 										<label for="name"><b>Name</b></label>
 										<input type="text" placeholder="Name" name="name" required>
 										<label for="phone"><b>Phone</b></label>
 										<input type="text" placeholder="Phone" name="phone" required>
 									
+										<label for="email"><b>Email</b></label>
+										<input type="text" placeholder="Enter Email" name="email" required>
+										<label for="areapin"><b>Area pincode</b></label>
+										<input type="text" placeholder="Area pincode" name="areapin" required>
+
 										
+										
+										<label for="bookname"><b>Book name</b></label>
+										<input type="text" placeholder="Book name" name="bookname" required>
+										<label for="author"><b>Author/Publication</b></label>
+										<input type="text" placeholder="Author/Publication" name="author" required>
 									
 										<button type="submit" class="btn">Submit</button>
-										<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+										
 									  </form>
-
+									  </div>
+									  
+									  </div> 
 								</div>
-									
 									&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" style="text-align:left;">Get Books</a>									
 								</div>
 							</div>
@@ -773,49 +822,30 @@ body {font-family: Arial, Helvetica, sans-serif;}
 				});
 				</script>
 				<script>
-					function openForm() {
-					  document.getElementById("myForm").style.display = "block";
-					}
-					
-					function closeForm() {
-					  document.getElementById("myForm").style.display = "none";
-					}
-					
-						
-					
-						</script>
-						
-						<script>
-						var openbtn = document.querySelectorAll(".open-button");
-
-						openbtn.forEach(function(btn){
-							btn.onclick = function{
-								var mod = btn.getAttribute("data-popup");
-							document.getElementById(myForm).style.display = "block";
-							};
-						});
-							
-						var closebtn = document.querySelectorAll(".form-container .btn");
-						closebtn.forEach(function(btn){
-							btn.onclick = function{
-								var mod = (btn.closest(".form-popup").style.display = "none");
-							
-							};
-						});
-						var cancelbtn = document.querySelectorAll(".form-container .cancel");
-						closebtn.forEach(function(btn){
-							btn.onclick = function{
-								var mod = (btn.closest(".form-popup").style.display = "none");
-							
-							};
-						});
-                        window.onclick = function(e){
-							if(e.target.className === ".form-popup"){
-								e.target.style.display = "none";
-							}
+					var modalBtns = document.querySelectorAll(".modal-open");
+				
+					modalBtns.forEach(function(btn){
+						btn.onclick = function(){
+							var modal = btn.getAttribute("data-modal");
+						document.getElementById(modal).style.display = "block";
 						};
+					});
 						
-					</script>
+					var closeBtns = document.querySelectorAll(".modal-close");
+					closeBtns.forEach(function(btn){
+						btn.onclick = function(){
+							var modal = (btn.closest(".modal").style.display = "none");
+						
+						};
+					});
+					
+					window.onclick = function(e){
+						if(e.target.className === "modal"){
+							e.target.style.display = "none";
+						}
+					};
+					
+				</script>
 					
 		</body>
 	</html>
