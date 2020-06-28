@@ -60,18 +60,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
 /* Button used to open the contact form - fixed at the bottom of the page */
 
 
-.open-button {
-  background-color: #555;
-  color:white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
 
 /* The popup form - hidden by default */
 
@@ -82,7 +70,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
  
   padding: 10px;
  
-  background-color: white;
+  background-color:#2F3C55;
+  
+}
+
+.form-select option{
+ color:gray;
+ 
+}
+.form-select{
+	color:gray;
+	background: #f1f1f1;
 }
 
 /* Full-width input fields */
@@ -93,18 +91,23 @@ body {font-family: Arial, Helvetica, sans-serif;}
   margin: 2px 0 6px 0;
   border: none;
   background: #f1f1f1;
+  
 }
+
+  
+
+
 
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
+  background-color: gray;
   outline: none;
  
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: green;
+  background-color:#F7631B;
   color: white;
   padding: 6px 10px;
   border: none;
@@ -115,10 +118,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color:red;
-}
+
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
@@ -129,13 +129,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
   .modal-header .modal-close{
         font-size: 20px;
-        background: white;
+        background: #2F3C55;
         border: 0;
         outline: 0;
         padding: 0;
         border-radius: 50px;
-      
-    }
+        color:white;
+	}
+	
+
+
+	
 			  </style>
 			  </head>
 		</head>
@@ -207,24 +211,35 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 							
 								<div class="modal-content">
-								  <div class="modal-header"><h4 style="text-decoration:underline; text-align:center;" > Student Registration</h4>
+								  <div class="modal-header"><h3 style="text-decoration:underline; text-align:center; color:white;" > Student Registration</h3>
 									<button class="icon modal-close" ><i
 									   class="material-icons">close</i></button>
 									  </div>
 								  <div class="modal-body">
 									<form action="#" class="form-container">
 										
-										<label for="name"><b>Name</b></label>
+										
 										<input type="text" placeholder="Name" name="name" required>
-										<label for="phone"><b>Phone</b></label>
+										
 										<input type="text" placeholder="Phone" name="phone" required>
 									
-										<label for="email"><b>Email</b></label>
+										
 										<input type="text" placeholder="Enter Email" name="email" required>
-										<label for="class"><b>Class</b></label>
+										
 										<input type="text" placeholder="Class" name="class" required>
-										<label for="subject"><b>Choose from our services</b></label>
-										<input type="text" placeholder="Subject" name="subject" required>
+										
+										
+											<select  class="form-select" >
+												<option datd-display="">Choose from our services</option>
+												<option value="1">Online Classes</option>
+												<option value="2">Classroom Classes</option>
+												<option value="3">Home tutions</option>
+												<option value="4">Personal Live tutions</option>
+												<option value="5">Educational consultancy</option>
+												<option value="6">Free NCERT Solutions</option>
+												<option value="7">free E-library</option>
+											</select>
+											
 										
 									
 										<button type="submit" class="btn">Submit</button>
@@ -276,28 +291,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
 							
 							<div class="modal" id="modal2">
 								<div class="modal-content">
-								  <div class="modal-header"><h4 style="text-decoration:underline">Donation form</h4>
+								  <div class="modal-header"><h3 style="text-decoration:underline; color:white;">Donate Books</h3>
 									<button class="icon modal-close" ><i
 									   class="material-icons">close</i></button>
 									  </div>
 								  <div class="modal-body">
 									<form action="#" class="form-container">
 										
-										<label for="name"><b>Name</b></label>
 										<input type="text" placeholder="Name" name="name" required>
-										<label for="phone"><b>Phone</b></label>
+										
 										<input type="text" placeholder="Phone" name="phone" required>
 									
-										<label for="email"><b>Email</b></label>
+										
 										<input type="text" placeholder="Enter Email" name="email" required>
-										<label for="areapin"><b>Area pincode</b></label>
-										<input type="text" placeholder="Area pincode" name="areapin" required>
+										
+										<input type="text" placeholder="Area Pincode" name="areapin" required>
+										
+										<input type="text" placeholder="Book Name" name="bookname" required>
 
-										
-										
-										<label for="bookname"><b>Book name</b></label>
-										<input type="text" placeholder="Book name" name="bookname" required>
-										<label for="author"><b>Author/Publication</b></label>
 										<input type="text" placeholder="Author/Publication" name="author" required>
 									
 										<button type="submit" class="btn">Submit</button>
@@ -613,7 +624,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
 								<h1 class="mb-10">Upcoming Events of our Institute</h1>
-								<p>If you are a serious astronomy fanatic like a lot of us</p>
+								
 							</div>
 						</div>
 					</div>								
@@ -621,82 +632,58 @@ body {font-family: Arial, Helvetica, sans-serif;}
 						<div class="active-upcoming-event-carusel">
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="img/e1.jpg" alt="">
+									<img class="img-fluid" src="img/d.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Bring Back Dreams
+									</h4></a>
 									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+										Imagine; eyes with unfulfilled dreams, intelligent mind wandering idle, hands with no decent work, life with no colours and a heart with no hope.
 									</p>
 								</div>
 							</div>
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="img/e2.jpg" alt="">
+									<img class="img-fluid" src="img/d1.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Bring Back Dreams</h4></a>
 									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+										
+										All this is because of NO MONEY TO BUY BOOKS....
+										Our team has started an initiative - BRING BACK DREAMS | DONATE BOOKS in which we need your cooperation.
 									</p>
 								</div>
 							</div>	
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="img/e1.jpg" alt="">
+									<img class="img-fluid" src="img/d.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Bring Back Dreams</h4></a>
 									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+										All you have to do is DONATE your BOOKS which are of NO USE TO YOU to the NEEDY PERSON YOU KNOW and with this simple act bring back dreams to someone's eyes, 
 									</p>
 								</div>
 							</div>	
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="img/e1.jpg" alt="">
+									<img class="img-fluid" src="img/d1.jpg" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
 									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
+									<a href="#"><h4>Bring Back Dreams</h4></a>
 									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+										Let their hands turn pages and hold pen, bring back colours to their life and give their heart a ray of hope.
+Lastly, always remember, a good deed is never wasted!!
+
 									</p>
 								</div>
 							</div>
-							<div class="single-carusel row align-items-center">
-								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="img/e2.jpg" alt="">
-								</div>
-								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
-								</div>
-							</div>	
-							<div class="single-carusel row align-items-center">
-								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="img/e1.jpg" alt="">
-								</div>
-								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
-								</div>
-							</div>																						
+																													
 						</div>
 					</div>
 				</div>	
